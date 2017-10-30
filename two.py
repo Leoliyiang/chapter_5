@@ -33,5 +33,5 @@ def day_num_to_name(num):
 leave_day = int(input("What day are you leaving? (0-6)"))
 away_days = int(input("How many nights are you gone?"))
 
-day_back = (leave_day + away_days)# % 7 leaving this out for now - remember to put back
+day_back = (leave_day + away_days) % 7 #leaving this out for now - remember to put back
 print("You will return on a",day_num_to_name(day_back))
