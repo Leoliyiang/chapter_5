@@ -8,10 +8,12 @@ POG=85
 SpeedG=10
 GG=500
 
-#def die():
- #   global HP
-  #  if HP<=0:
-   #     print("You lost cuz you have no HP anymore! Have fun in the hell and make wise choice at next time.)
+def die():
+    global HP
+    if HP<=0:
+        print("You lost cuz you have no HP anymore! Have fun in the hell and make wise choice at next time.")
+    else:
+        choice2()
 
 def choice():
     global PO
@@ -29,7 +31,6 @@ def choice():
         choice2()
         
 def choice2():
-    #die()
     c2=input("Fight or Flee")
     if c2=="fight":
         fight()
@@ -50,26 +51,26 @@ def fight():
     elif HP>HPG and PO<POG:
         HP=HP-20
         print("You lose, make the choice again","Your life is now ",HP)
-        choice2()
+        die()
     elif HP<HPG and PO>POG:
         HP=HP-20,
         print("You lose, make the choice again","Your life is now ",HP)
-        choice2()
+        die()
     elif HP<HPG and PO<POG:
         HP=HP-50
         print("Gorgan kicked your ass totally, make the choice again","Your life is now ",HP)
-        choice2()
+        die()
 
 def flee():
     Speed=85
     SpeedG=10
     if Speed>SpeedG:
         print("You retreat back! Make the choice again!")
-        choice2()
+        die()
     elif Speed<SpeedG:
         HP=HP-50
         print("You were caught and got beated, make the choice again","Your life is now ",HP)
-        choice2()
+        die()
     
 choice()
         
