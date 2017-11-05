@@ -12,6 +12,7 @@ def die():
     global HP
     if HP<=0:
         print("You lost cuz you have no HP anymore! Have fun in the hell and make wise choice at next time.")
+        choice()
     else:
         choice2()
 
