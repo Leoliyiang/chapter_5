@@ -29,9 +29,9 @@ def day_num_to_name(num):
 #print(daynumtoname(int(input("Please enter an integer between 0 and 6."))))
 leave_day = int(input("What day are you leaving? (0-6)"))
 
-if leave_day != 0 and leave_day!=1 and leave_day!=2 and leave_day!=3 and leave_day!=4 and leave_day!=5 and leave_day!=6:
-    print(" Need to be 0-6, u retarded! ")
-else :
-    away_days = int(input("How many nights are you gone?"))
-    day_back = (leave_day + away_days) % 7 #leaving this out for now - remember to put back
-    print("You will return on a",day_num_to_name(day_back))
+while leave_day != 0 and leave_day!=1 and leave_day!=2 and leave_day!=3 and leave_day!=4 and leave_day!=5 and leave_day!=6:
+    leave_day = int(input("What day are you leaving? (0-6)"))
+
+away_days = int(input("How many nights are you gone?"))
+day_back = (leave_day + away_days) % 7 #leaving this out for now - remember to put back
+print("You will return on a",day_num_to_name(day_back))
